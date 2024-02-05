@@ -19,16 +19,18 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    <link href="../css/style.css" rel="stylesheet" />
+    <link href="../css/estilo.css" rel="stylesheet" />
     <title>SOBRE MI</title>
   </head>
   <body>
     <header>
-      <img
-        class="logo"
-        src="../img/Coaching Nutricional.png"
-        alt="imagen-kiwi"
-      />
+      <div class="container-logo">
+        <img
+          class="logo animate__animated animate__rubberBand animate__delay-2s"
+          src="../img/Logo.png"
+          alt="imagen-kiwi"
+        />
+      </div>
       <div class="navbar navbar-expand-lg encabezado">
         <div class="container-fluid">
           <button
@@ -44,18 +46,18 @@
           </button>
           <nav class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-              <li><a href="../index.html"> HOME </a></li>
+              <li><a class="anclas" href="../index.html"> HOME </a></li>
               <li>
-                <a href="sobre-mi.html"> SOBRE MI </a>
+                <a class="anclas" href="sobre-mi.html"> SOBRE MI </a>
               </li>
               <li>
-                <a href="acerca-de.html"> ACERCA DE </a>
+                <a class="anclas" href="acerca-de.html"> ACERCA DE </a>
               </li>
               <li>
-                <a href="servicios.html"> SERVICIOS </a>
+                <a class="anclas" href="servicios.html"> SERVICIOS </a>
               </li>
               <li>
-                <a href="contacto.html"> CONTACTO </a>
+                <a class="anclas" href="contacto.html"> CONTACTO </a>
               </li>
             </ul>
           </nav>
@@ -65,22 +67,39 @@
     <main>
       <section>
         <h1>Te guio,te motivo y te ayudo a construir habitos saludables</h1>
-        <div class="sobre-mi">
-          <img class="frutas" src="../img/Frutas.jpg" alt="Frutas" />
 
-          <div class="present">
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. A,
-              impedit aut ab est autem aspernatur? Corporis maiores eos ipsa
-              ducimus quibusdam, molestiae quas autem enim sequi minus,
-              recusandae quo. Minus!
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-              fugit necessitatibus similique quaerat architecto natus
-              consequuntur aut temporibus voluptatum et officia culpa molestias
-              obcaecati molestiae, commodi hic eum possimus ipsa?
-            </p>
+        <div class="container-sobre-mi">
+          <div class="row justify-content-center align-items-center">
+            <div class="col-lg-5 col-md-6 col-sm-12 pe-md-4">
+              <img
+                class="coaching"
+                class="img-fluid"
+                src="../img/Coach.jpg"
+                alt="Coach"
+              />
+            </div>
+            <div
+              class="present col-lg-7 col-md-6 col-sm-12 ps-md-4 animate__animated animate__bounceInRight animate__slower"
+            >
+              <p>
+                Mi objetivo es ayudarte a introducir hábitos saludables para tu
+                vida, motivarte a realizar actividad física, y guiarte para
+                conectar con el presente. Me instruí en el mundo de la nutrición
+                deportiva con el objetivo de combinar mis dos pasiones, la
+                nutrición y el deporte.
+              </p>
+              <p>
+                Una correcta alimentación nos aporta los nutrientes necesarios
+                para mantener un estado óptimo de salud, ayudándonos a un mejor
+                rendimiento y recuperación en los entrenamientos. Te propongo
+                armar un plan de alimentación que cubra todas las necesidades
+                tanto de macro como micronutrientes es función de tu actividad
+                física. Una buena alimentación no solo está relacionada con la
+                perdida de grasa y aumento de masa muscular, sino también con la
+                mejora de la calidad de vida y disminuyendo la aparición
+                prematura de enfermedades crónico-degenerativas.
+              </p>
+            </div>
           </div>
         </div>
       </section>

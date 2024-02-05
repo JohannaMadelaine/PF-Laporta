@@ -1,0 +1,19 @@
+/*SERVICIOS*/
+
+@mixin sizes($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+.container-serv {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+}
+
+.servicios {
+  @include sizes(300px, 350px);
+  object-fit: $object-f;
+  margin: 60px;
+  box-shadow: 6px 6px 10px grey;
+}

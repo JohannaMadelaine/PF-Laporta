@@ -1,0 +1,25 @@
+/*ACERCA DE*/
+
+@mixin sizes($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+.imagen-acerca-de {
+  @include sizes(400px, 500px);
+  margin: 30px;
+  object-fit: $object-f;
+}
+
+.img-fluid {
+  @include sizes(400px, 500px);
+  margin: 50px;
+  object-fit: $object-f;
+}
+
+.row {
+  display: flex;
+  margin-right: -20px;
+  margin-left: -20px;
+  font-size: 20px;
+}

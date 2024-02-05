@@ -1,0 +1,352 @@
+@import url("https://fonts.googleapis.com");
+@import url("https://fonts.gstatic.com");
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Kalam&family=Lora&family=Playfair+Display:ital@1&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../img/fondo.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "Lora", serif;
+  margin: auto;
+  padding: 20px 20px;
+}
+
+/*HEADER*/
+.anclas {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px #997da0;
+  text-align: center;
+}
+
+.logo {
+  width: 220px;
+  margin: auto;
+}
+
+.container-logo {
+  background-image: url(../img/Limones-y-kiwis.jpg);
+  height: 300px;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#navbarNav {
+  justify-content: center;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 30px 20px;
+  font-size: large;
+}
+
+h1,
+h2 {
+  font-size: 27px;
+  text-align: center;
+  text-decoration: underline;
+  margin: 20px;
+  padding: 20px;
+}
+
+/*HOME*/
+.grid-container {
+  display: grid;
+  justify-content: center;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: repeat(3, 200px);
+  row-gap: 30px;
+  column-gap: 30px;
+}
+.grid-container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 7px;
+  box-shadow: 4px 4px 3px #afc8ad;
+  object-fit: cover;
+}
+
+/*SOBRE MI*/
+.present {
+  width: 700px;
+  height: 500px;
+  /* margin-right:30px;*/
+  padding: 30px;
+}
+
+.coaching {
+  width: 400px;
+  height: 500px;
+  display: flex;
+  margin-left: 40px;
+  object-fit: cover;
+}
+
+.img-fluid {
+  width: 400px;
+  height: 500px;
+  margin: 50px;
+  object-fit: cover;
+}
+
+.row {
+  display: flex;
+  margin-right: -20px;
+  margin-left: -20px;
+  font-size: 20px;
+}
+
+/*ACERCA DE*/
+.imagen-acerca-de {
+  width: 400px;
+  height: 500px;
+  margin: 30px;
+  object-fit: cover;
+}
+
+.img-fluid {
+  width: 400px;
+  height: 500px;
+  margin: 50px;
+  object-fit: cover;
+}
+
+.row {
+  display: flex;
+  margin-right: -20px;
+  margin-left: -20px;
+  font-size: 20px;
+}
+
+/*SERVICIOS*/
+.container-serv {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+}
+
+.servicios {
+  width: 300px;
+  height: 350px;
+  object-fit: cover;
+  margin: 60px;
+  box-shadow: 6px 6px 10px grey;
+}
+
+/*Footer*/
+footer {
+  text-align: center;
+  margin-top: 4rem;
+  height: 25px;
+}
+
+h3 {
+  font-size: x-large;
+  text-decoration: underline;
+  padding: 20px;
+}
+
+.formulario {
+  background: #fff;
+  width: 30%;
+  height: 10%;
+  margin: auto;
+  padding: 5px 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
+  font-size: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  width: 80%;
+  height: auto;
+  position: relative;
+  padding: 3px;
+  margin: 10px;
+}
+
+label {
+  color: #6ed49a;
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+}
+
+.boton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.bton {
+  text-align: center;
+  color: #fff;
+  background-color: #1aa37a;
+  border: 1px solid #6ed49a;
+  border-radius: 4px;
+  font-size: 15px;
+  cursor: pointer;
+  width: 80px;
+  height: 30px;
+  padding-top: 3px;
+  transition: 0.5s;
+}
+.bton .bton:hover {
+  color: #fff;
+  background-color: #24ce9b;
+}
+
+input,
+textarea {
+  background: none;
+  color: rgba(102, 85, 85, 0.8274509804);
+  font-size: 15px;
+  padding: 10px 10px 10px 10px;
+  margin: 10px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #e6d4eb;
+  resize: none;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+.Redes-sociales {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  gap: 20px;
+}
+.Redes-sociales a {
+  font-size: 20px;
+}
+
+i,
+.bi,
+.bi-facebook {
+  color: #9f8aa5;
+}
+
+/*Mobile*/
+@media only screen and (min-width: 200px) and (max-width: 500px) {
+  body {
+    background: linear-gradient(#cfebeb, #e4d4e9);
+  }
+  nav ul li {
+    height: auto;
+    margin: 15px 15px;
+    font-size: medium;
+    text-align: center;
+  }
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .habitos {
+    padding-top: 20px;
+  }
+  .grid-container img {
+    box-shadow: 8px 8px 13px #a1c59e;
+  }
+  .container-section,
+  .container-serv,
+  .container-sobre-mi {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .servicios {
+    margin: 7vh;
+  }
+  .formulario {
+    width: 50vw;
+    height: 80vh;
+    margin: auto;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .form {
+    width: max-content;
+    height: auto;
+  }
+  .boton {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  input,
+  textarea {
+    width: 80%;
+  }
+}
+/*Tablet*/
+@media only screen and (min-width: 501px) and (max-width: 1328px) {
+  body {
+    background-image: url(../img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  nav ul li {
+    display: inline-block;
+    margin: 20px 20px;
+  }
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .container-serv {
+    flex-direction: column;
+    align-items: center;
+  }
+  .servicios {
+    margin: 4vh;
+  }
+  .formulario {
+    width: 50vw;
+    height: 80vh;
+    margin: auto;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .form {
+    width: max-content;
+    height: auto;
+  }
+  .boton {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  .container-sobre-mi {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/*# sourceMappingURL=estilo.css.map */
