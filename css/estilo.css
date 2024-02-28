@@ -2,6 +2,7 @@
 @import url("https://fonts.gstatic.com");
 @import url("https://fonts.googleapis.com/css2?family=Caveat&family=Kalam&family=Lora&family=Playfair+Display:ital@1&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -53,97 +54,160 @@ nav ul li {
   font-size: large;
 }
 
-h1,
-h2 {
-  font-size: 27px;
-  text-align: center;
-  text-decoration: underline;
-  margin: 20px;
-  padding: 20px;
+/*HOME*/
+@keyframes show {
+  from {
+    opacity: 0;
+    scale: 25%;
+  }
+  to {
+    opacity: 1;
+    scale: 100%;
+  }
+}
+.animacion {
+  view-timeline-name: --image;
+  view-timeline-axis: block;
+  animation-timeline: --image;
+  animation-name: show;
+  animation-range: entry 25% cover 50%;
+  animation-fill-mode: both;
 }
 
-/*HOME*/
 .grid-container {
   display: grid;
-  justify-content: center;
-  grid-template-rows: auto auto auto;
-  grid-template-columns: repeat(3, 200px);
-  row-gap: 30px;
-  column-gap: 30px;
-}
-.grid-container img {
   width: 100%;
-  height: 100%;
-  border-radius: 7px;
-  box-shadow: 4px 4px 3px #afc8ad;
+  margin: 0;
+  place-content: center;
+  grid-auto-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+.grid-container .grid-item img {
+  width: 400px;
+  height: 300px;
+  border-radius: 6px;
+  box-shadow: 3px 3px 4px rgb(190, 188, 188);
   object-fit: cover;
+  margin: auto;
+  display: flex;
+  place-items: center;
+}
+.grid-container .grid-item p {
+  font-size: 18px;
+  text-align: center;
+  margin: 2rem;
+}
+
+.habitos h1 {
+  font-family: "Alegreya Sans", sans-serif;
+  font-style: normal;
+  font-size: 30px;
+  text-decoration: none;
+  color: #ac7ab9;
+  text-shadow: 3px 3px 3px #fff;
+  text-align: center;
+  margin: 25px;
+}
+
+.habitos p {
+  font-size: 18px;
+  text-align: center;
+  margin: 3rem;
 }
 
 /*SOBRE MI*/
-.present {
-  width: 700px;
-  height: 500px;
-  /* margin-right:30px;*/
-  padding: 30px;
+.container-sobre-mi {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  place-content: center;
 }
-
-.coaching {
+.container-sobre-mi p {
+  display: inline-block;
+  width: 40%;
+  font-size: 18px;
+  text-align: center;
+  margin: 3rem;
+}
+.container-sobre-mi .coaching {
   width: 400px;
   height: 500px;
-  display: flex;
-  margin-left: 40px;
   object-fit: cover;
+  margin: 10px;
 }
 
-.img-fluid {
-  width: 400px;
-  height: 500px;
-  margin: 50px;
-  object-fit: cover;
+.saludo h1 {
+  font-family: "Alegreya Sans", sans-serif;
+  font-style: normal;
+  font-size: 25px;
+  text-decoration: none;
+  color: #ac7ab9;
+  text-shadow: 3px 3px 3px #fff;
+  text-align: center;
+  margin: 3rem;
 }
 
-.row {
-  display: flex;
-  margin-right: -20px;
-  margin-left: -20px;
-  font-size: 20px;
+.negrita {
+  color: #ac7ab9;
 }
 
 /*ACERCA DE*/
 .imagen-acerca-de {
   width: 400px;
   height: 500px;
-  margin: 30px;
+  margin: 10px;
   object-fit: cover;
 }
 
-.img-fluid {
-  width: 400px;
-  height: 500px;
-  margin: 50px;
-  object-fit: cover;
+.info h2 {
+  font-family: "Alegreya Sans", sans-serif;
+  font-style: normal;
+  font-size: 30px;
+  text-decoration: none;
+  color: #ac7ab9;
+  text-shadow: 3px 3px 3px #fff;
+  text-align: center;
+  margin: 3rem;
 }
 
-.row {
-  display: flex;
-  margin-right: -20px;
-  margin-left: -20px;
+.row p {
+  text-align: center;
   font-size: 20px;
+  padding: 10px;
 }
 
 /*SERVICIOS*/
-.container-serv {
+.fila {
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0;
+  place-content: center;
+}
+
+.columna p {
+  text-align: center;
+  font-size: 20px;
 }
 
 .servicios {
   width: 300px;
   height: 350px;
   object-fit: cover;
-  margin: 60px;
+  margin: 3rem;
   box-shadow: 6px 6px 10px grey;
+}
+
+.prestacion h2 {
+  font-family: "Alegreya Sans", sans-serif;
+  font-style: normal;
+  font-size: 25px;
+  text-decoration: none;
+  color: #ac7ab9;
+  text-shadow: 3px 3px 3px #fff;
+  text-align: center;
+  margin: 3rem;
 }
 
 /*Footer*/
@@ -161,31 +225,30 @@ h3 {
 
 .formulario {
   background: #fff;
-  width: 30%;
-  height: 10%;
+  width: 25%;
   margin: auto;
   padding: 5px 10px;
   border-radius: 10px;
   box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
   font-size: 17px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  place-content: center;
+  place-items: center;
 }
 
 .form {
-  width: 80%;
+  width: 90%;
   height: auto;
   position: relative;
-  padding: 3px;
-  margin: 10px;
+  padding: 10px;
+  margin: 0px;
 }
 
 label {
   color: #6ed49a;
   display: flex;
   flex-direction: column;
-  width: max-content;
+  margin-left: 1rem;
 }
 
 .boton {
@@ -208,7 +271,8 @@ label {
   padding-top: 3px;
   transition: 0.5s;
 }
-.bton .bton:hover {
+
+.bton:hover {
   color: #fff;
   background-color: #24ce9b;
 }
@@ -218,12 +282,12 @@ textarea {
   background: none;
   color: rgba(102, 85, 85, 0.8274509804);
   font-size: 15px;
-  padding: 10px 10px 10px 10px;
+  padding: 10px;
   margin: 10px;
   display: block;
-  width: 100%;
+  width: 90%;
   border: none;
-  border-bottom: 1px solid #e6d4eb;
+  border-bottom: 1px solid #dacedd;
   resize: none;
 }
 
@@ -239,20 +303,32 @@ textarea:focus {
   gap: 20px;
 }
 .Redes-sociales a {
-  font-size: 20px;
+  font-size: 25px;
 }
 
 i,
 .bi,
 .bi-facebook {
-  color: #9f8aa5;
+  color: #ac7ab9;
+}
+
+h3 {
+  font-family: "Alegreya Sans", sans-serif;
+  font-style: normal;
+  font-size: 30px;
+  text-decoration: none;
+  color: #ac7ab9;
+  text-shadow: 3px 3px 3px #fff;
+  text-align: center;
+  margin: 20px;
 }
 
 /*Mobile*/
-@media only screen and (min-width: 200px) and (max-width: 500px) {
+@media only screen and (min-width: 300px) and (max-width: 500px) {
   body {
     background: linear-gradient(#cfebeb, #e4d4e9);
   }
+  /*HOME*/
   nav ul li {
     height: auto;
     margin: 15px 15px;
@@ -260,45 +336,120 @@ i,
     text-align: center;
   }
   .grid-container {
-    grid-template-columns: 1fr 1fr;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 10px;
+    place-content: center;
+    margin: 0;
   }
-  .habitos {
-    padding-top: 20px;
+  .grid-container .grid-item p {
+    font-size: 13px;
+    text-align: center;
+    margin: 1rem;
+    white-space: wrap;
+    overflow-y: auto;
+    text-overflow: ellipsis;
   }
-  .grid-container img {
-    box-shadow: 8px 8px 13px #a1c59e;
+  .grid-container .grid-item img {
+    max-width: 270px;
+    height: 170px;
+    gap: 10px;
+    border-radius: 6px;
+    box-shadow: 3px 3px 4px rgb(190, 188, 188);
+    object-fit: cover;
+    display: flex;
+    place-items: center;
   }
-  .container-section,
-  .container-serv,
+  .habitos p {
+    font-size: 15px;
+    text-align: center;
+    margin: 2rem;
+  }
+  /*SOBRE MI */
   .container-sobre-mi {
-    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0;
     justify-content: center;
     align-items: center;
   }
-  .servicios {
-    margin: 7vh;
+  .container-sobre-mi .coaching {
+    max-width: 100%;
+    margin: 10px;
+    object-fit: cover;
+    display: flex;
   }
-  .formulario {
-    width: 50vw;
-    height: 80vh;
-    margin: auto;
+  .container-sobre-mi .present {
+    font-size: 18px;
+    align-items: center;
+    margin: 0;
+    width: max-content;
+  }
+  /*ACERCA DE*/
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    place-content: center;
+  }
+  .imagen-acerca-de {
+    max-width: 100%;
+    object-fit: cover;
+    height: 350px;
+    margin: 0;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  /*SERVICIOS*/
+  .prestacion h2 {
+    margin: 2rem;
+  }
+  .fila {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    width: 100%;
+    place-content: center;
+  }
+  .columna .servicios {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 250px;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+  }
+  /*CONTACTO*/
+  .formulario {
+    width: 90%;
+    padding: 10px;
+    display: flex;
     flex-direction: column;
     align-items: center;
   }
   .form {
-    width: max-content;
+    min-width: 250px;
     height: auto;
+    padding: 10px;
+    margin: 0;
+  }
+  label {
+    display: flex;
+    flex-direction: column;
+  }
+  input,
+  textarea {
+    width: 80%;
   }
   .boton {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 10px;
-  }
-  input,
-  textarea {
-    width: 80%;
   }
 }
 /*Tablet*/
@@ -310,30 +461,114 @@ i,
     background-size: cover;
     background-attachment: fixed;
   }
+  /*HOME*/
   nav ul li {
-    display: inline-block;
-    margin: 20px 20px;
+    height: auto;
+    margin: 15px 15px;
+    font-size: medium;
+    text-align: center;
   }
   .grid-container {
-    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    grid-template-rows: repeat(2, minmax(100px, 1fr));
+    gap: 10px;
+    place-content: center;
   }
-  .container-serv {
-    flex-direction: column;
+  .grid-container .grid-item p {
+    font-size: 12px;
+    text-align: center;
+    margin: 1rem;
+    overflow-y: auto;
+    white-space: wrap;
+  }
+  .grid-container .grid-item img {
+    display: flex;
+    inline-size: 100%;
+    max-width: 300px;
+    height: 250px;
+    gap: 10px;
+    border-radius: 6px;
+    box-shadow: 3px 3px 4px rgb(190, 188, 188);
+    object-fit: cover;
+    place-items: center;
+  }
+  .habitos p {
+    font-size: 15px;
+    text-align: center;
+    margin: 2rem;
+  }
+  /*SOBRE MI*/
+  .container-sobre-mi {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    place-content: center;
+  }
+  .container-sobre-mi p {
+    display: inline-block;
+    overflow-y: visible;
+    width: max-content;
+    font-size: 20px;
+    text-align: center;
+    margin: 1rem;
+  }
+  .container-sobre-mi .coaching {
+    width: 400px;
+    height: 500px;
+    object-fit: cover;
+    margin: 10px;
+    display: flex;
+  }
+  /*ACERCA DE*/
+  .container {
+    display: flex;
+    padding: 10px;
+    width: 100%;
+    justify-content: center;
     align-items: center;
   }
-  .servicios {
-    margin: 4vh;
+  .imagen-acerca-de {
+    max-width: 100%;
+    object-fit: cover;
+    margin: 0;
+    display: flex;
+    justify-content: center;
   }
+  .row p {
+    font-size: 18px;
+    height: min-content;
+  }
+  /*SERVICIOS*/
+  .fila {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .fila .columna p {
+    text-align: center;
+    font-size: 20px;
+    margin: 10px;
+  }
+  .fila .columna .servicios {
+    display: inline-block;
+    width: 300px;
+    height: 350px;
+    margin: 10px;
+  }
+  /*CONTACTO*/
   .formulario {
-    width: 50vw;
-    height: 80vh;
+    width: 300px;
     margin: auto;
     padding: 10px;
     flex-direction: column;
     align-items: center;
   }
   .form {
-    width: max-content;
+    min-width: 300px;
     height: auto;
   }
   .boton {
@@ -341,11 +576,6 @@ i,
     justify-content: center;
     align-items: center;
     padding: 10px;
-  }
-  .container-sobre-mi {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
 }
 

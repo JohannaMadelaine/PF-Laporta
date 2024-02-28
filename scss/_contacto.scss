@@ -14,31 +14,30 @@ h3 {
 
 .formulario {
   background: $withe-color;
-  width: 30%;
-  height: 10%;
+  width: 25%;
   margin: auto;
   padding: 5px 10px;
   border-radius: 10px;
   box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
   font-size: 17px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  place-content: center;
+  place-items: center;
 }
 
 .form {
-  width: 80%;
+  width: 90%;
   height: auto;
   position: relative;
-  padding: 3px;
-  margin: 10px;
+  padding: 10px;
+  margin: 0px;
 }
 
 label {
   color: $green-color;
   display: flex;
   flex-direction: column;
-  width: max-content;
+  margin-left: 1rem;
 }
 
 .boton {
@@ -60,11 +59,11 @@ label {
   height: 30px;
   padding-top: 3px;
   transition: 0.5s;
+}
 
-  .bton:hover {
-    color: $withe-color;
-    background-color: #24ce9b;
-  }
+.bton:hover {
+  color: $withe-color;
+  background-color: #24ce9b;
 }
 
 input,
@@ -72,12 +71,12 @@ textarea {
   background: none;
   color: #665555d3;
   font-size: 15px;
-  padding: 10px 10px 10px 10px;
+  padding: 10px;
   margin: 10px;
   display: block;
-  width: 100%;
+  width: 90%;
   border: none;
-  border-bottom: 1px solid #e6d4eb;
+  border-bottom: 1px solid #dacedd;
   resize: none;
 }
 
@@ -93,12 +92,23 @@ textarea:focus {
   gap: 20px;
 
   a {
-    font-size: 20px;
+    font-size: 25px;
   }
 }
 
 i,
 .bi,
 .bi-facebook {
-  color: #9f8aa5;
+  color: #ac7ab9;
+}
+
+h3 {
+  font-family: "Alegreya Sans", sans-serif;
+  font-style: normal;
+  font-size: 30px;
+  text-decoration: none;
+  color: #ac7ab9;
+  text-shadow: 3px 3px 3px #fff;
+  text-align: center;
+  margin: 20px;
 }

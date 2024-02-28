@@ -1,9 +1,11 @@
 /*Mobile*/
 
-@media only screen and (min-width: 200px) and (max-width: 500px) {
+@media only screen and (min-width: 300px) and (max-width: 500px) {
   body {
     background: linear-gradient(#cfebeb, #e4d4e9);
   }
+
+  /*HOME*/
 
   nav ul li {
     height: auto;
@@ -13,41 +15,135 @@
   }
 
   .grid-container {
-    grid-template-columns: 1fr 1fr;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 10px;
+    place-content: center;
+    margin: 0;
+
+    .grid-item {
+      p {
+        font-size: 13px;
+        text-align: center;
+        margin: 1rem;
+        white-space: wrap;
+        overflow-y: auto;
+        text-overflow: ellipsis;
+      }
+
+      img {
+        max-width: 270px;
+        height: 170px;
+        gap: 10px;
+        border-radius: 6px;
+        box-shadow: 3px 3px 4px rgb(190, 188, 188);
+        object-fit: $object-f;
+        display: flex;
+        place-items: center;
+      }
+    }
   }
 
-  .habitos {
-    padding-top: 20px;
+  .habitos p {
+    font-size: 15px;
+    text-align: center;
+    margin: 2rem;
   }
 
-  .grid-container img {
-    box-shadow: 8px 8px 13px #a1c59e;
-  }
+  /*SOBRE MI */
 
-  .container-section,
-  .container-serv,
   .container-sobre-mi {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+
+    .coaching {
+      max-width: 100%;
+      margin: 10px;
+      object-fit: $object-f;
+      display: flex;
+    }
+
+    .present {
+      font-size: 18px;
+      align-items: center;
+      margin: 0;
+      width: max-content;
+    }
+  }
+
+  /*ACERCA DE*/
+
+  .container {
+    display: flex;
     flex-direction: column;
+    width: 100%;
+    place-content: center;
+  }
+
+  .imagen-acerca-de {
+    max-width: 100%;
+    object-fit: $object-f;
+    height: 350px;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /*SERVICIOS*/
+
+  .prestacion h2 {
+    margin: 2rem;
+  }
+
+  .fila {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    width: 100%;
+    place-content: center;
+  }
+
+  .columna .servicios {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 250px;
+    height: 300px;
     justify-content: center;
     align-items: center;
   }
 
-  .servicios {
-    margin: 7vh;
-  }
+  /*CONTACTO*/
 
   .formulario {
-    width: 50vw;
-    height: 80vh;
-    margin: auto;
+    width: 90%;
     padding: 10px;
+    display: flex;
     flex-direction: column;
     align-items: center;
   }
 
   .form {
-    width: max-content;
+    min-width: 250px;
     height: auto;
+    padding: 10px;
+    margin: 0;
+  }
+
+  label {
+    display: flex;
+    flex-direction: column;
+  }
+
+  input,
+  textarea {
+    width: 80%;
   }
 
   .boton {
@@ -55,11 +151,6 @@
     justify-content: center;
     align-items: center;
     padding: 10px;
-  }
-
-  input,
-  textarea {
-    width: 80%;
   }
 }
 
@@ -74,27 +165,129 @@
     background-attachment: fixed;
   }
 
+  /*HOME*/
+
   nav ul li {
-    display: inline-block;
-    margin: 20px 20px;
+    height: auto;
+    margin: 15px 15px;
+    font-size: medium;
+    text-align: center;
   }
 
   .grid-container {
-    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    grid-template-rows: repeat(2, minmax(100px, 1fr));
+    gap: 10px;
+    place-content: center;
+
+    .grid-item {
+      p {
+        font-size: 12px;
+        text-align: center;
+        margin: 1rem;
+        overflow-y: auto;
+        white-space: wrap;
+      }
+
+      img {
+        display: flex;
+        inline-size: 100%;
+        max-width: 300px;
+        height: 250px;
+        gap: 10px;
+        border-radius: 6px;
+        box-shadow: 3px 3px 4px rgb(190, 188, 188);
+        object-fit: $object-f;
+        place-items: center;
+      }
+    }
   }
 
-  .container-serv {
-    flex-direction: column;
+  .habitos p {
+    font-size: 15px;
+    text-align: center;
+    margin: 2rem;
+  }
+
+  /*SOBRE MI*/
+
+  .container-sobre-mi {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    place-content: center;
+
+    p {
+      display: inline-block;
+      overflow-y: visible;
+      width: max-content;
+      font-size: 20px;
+      text-align: center;
+      margin: 1rem;
+    }
+
+    .coaching {
+      @include sizes(400px, 500px);
+      object-fit: $object-f;
+      margin: 10px;
+      display: flex;
+    }
+  }
+
+  /*ACERCA DE*/
+
+  .container {
+    display: flex;
+    padding: 10px;
+    width: 100%;
+    justify-content: center;
     align-items: center;
   }
 
-  .servicios {
-    margin: 4vh;
+  .imagen-acerca-de {
+    max-width: 100%;
+    object-fit: $object-f;
+    margin: 0;
+    display: flex;
+    justify-content: center;
   }
 
+  .row p {
+    font-size: 18px;
+    height: min-content;
+  }
+
+  /*SERVICIOS*/
+
+  .fila {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    .columna {
+      p {
+        text-align: center;
+        font-size: 20px;
+        margin: 10px;
+      }
+
+      .servicios {
+        display: inline-block;
+        width: 300px;
+        height: 350px;
+        margin: 10px;
+      }
+    }
+  }
+
+  /*CONTACTO*/
+
   .formulario {
-    width: 50vw;
-    height: 80vh;
+    width: 300px;
     margin: auto;
     padding: 10px;
     flex-direction: column;
@@ -102,7 +295,7 @@
   }
 
   .form {
-    width: max-content;
+    min-width: 300px;
     height: auto;
   }
 
@@ -111,11 +304,5 @@
     justify-content: center;
     align-items: center;
     padding: 10px;
-  }
-
-  .container-sobre-mi {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
 }
